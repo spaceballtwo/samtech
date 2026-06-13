@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swing Coach AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>⚾ Swing Coach AI</h1>
+    <p class="tag">Record a swing. Get coached by GPT-4o.</p>
+  </header>
+
+  <main>
+    <section class="camera-card">
+      <div class="video-wrap">
+        <video id="video" autoplay muted playsinline></video>
+        <div id="countdown" class="countdown hidden"></div>
+      </div>
+
+      <div class="controls">
+        <button id="startCam">Enable camera</button>
+        <button id="record" disabled>Record swing</button>
+      </div>
+      <p id="status" class="status">Click “Enable camera” to begin.</p>
+
+      <div id="thumbs" class="thumbs"></div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="overall">
+        <div id="overallScore" class="overall-num">–</div>
+        <div class="overall-label">Overall</div>
+      </div>
+
+      <div id="scoreBars" class="score-bars"></div>
+
+      <p id="summary" class="summary"></p>
+
+      <div class="feedback-grid">
+        <div class="fb-col">
+          <h3>✅ Strengths</h3>
+          <ul id="strengths"></ul>
+        </div>
+        <div class="fb-col">
+          <h3>🔧 Fixes</h3>
+          <ul id="fixes"></ul>
+        </div>
+        <div class="fb-col">
+          <h3>🥎 Drills</h3>
+          <ul id="drills"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
